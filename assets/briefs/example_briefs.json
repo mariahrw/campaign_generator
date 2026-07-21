@@ -1,0 +1,48 @@
+{
+    "id": "The Breakfast Rewind",
+    "products": [
+        {
+            "id": "honey-smacks",
+            "name": "Honey Smacks",
+            "description": "A classic, honey-sweetened puffed wheat cereal that provides a satisfying crunch and a quick, delicious start to any busy morning.",
+            "category": "cereal",
+            "asset_dir": "assets/products/honey-smacks",
+            "layouts": ["1:1", "9:16"],
+            "scene_setting": "A 1990s kitchen breakfast table at golden-hour morning light - an empty white bowl and spoon set out ready for breakfast, a glass jug of milk with no label, a folded napkin, with warm sunlight streaming through blinds."
+        },
+        {
+            "id": "reeses-puffs",
+            "name": "Reeses Puffs",
+            "description": "A sweet and crunchy corn cereal made with real peanut butter and cocoa, delivering a deliciously energizing breakfast that kids and teenagers love.",
+            "category": "cereal",
+            "asset_dir": "assets/products/reeses-puffs",
+            "layouts": [ "1:1", "16:9"],
+            "scene_setting": "A 1990s living room floor in front of a glowing CRT television airing Saturday morning cartoons, low golden light - an empty white bowl and spoon set on a low coffee table, a boombox and a stack of comic books nearby, a backpack leaning against the couch, soft carpet texture in the foreground, background kept softly out of focus with no shelving, cabinetry, or other packaged products visible."
+        }
+
+    ],
+    "target_markets": [
+        {
+            "target_region": "North America",
+            "IETF_codes": ["en-US", "es-US"]
+        },
+        {
+            "target_region": "Western Europe",
+            "IETF_codes": ["fr-FR"]
+        }
+    ],
+    "target_audience": "Nostalgia-seeking Millennials and Gen Xers (ages 30–45) who grew up on Saturday morning cartoons, collectible toys hidden at the bottom of the cereal box, and race-to-the-bus school mornings. They crave the carefree attitude, bright aesthetics, and unapologetic fun of the 1990s.",
+    "tone": ["fun, high-energy, 90s"],
+    "campaign_message": {
+        "tag": "The '90s called. Breakfast is ready.",
+        "body": "Grab a spoon and rewind to the sweet stuff. Whether you're reliving the magic of Saturday mornings or just need a blast of pure, sugary joy to start your day, fuel up with the ultimate throwback."
+    },
+    "brand": {
+        "primary_font": "assets/fonts/Dom Casual.ttf",
+        "secondary_font": "assets/fonts/3STRIKES.TTF",
+        "primary_color": "#FFFFFF",
+        "secondary_color": "#FFFFFF",
+        "copy_background_color": "#5d00c9",
+        "copy_background_opacity": 0.5
+    }
+}

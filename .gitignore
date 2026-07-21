@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+output/
+*.png
+!docs/examples/*.png
+!assets/products/**/*.png
+.DS_Store
+RETROSPECTIVE.md
+CLAUDE.md
