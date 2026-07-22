@@ -80,7 +80,7 @@ class GoogleGenAIService(ImageGenService, CopyGenService):
     ) -> Path:
         """Composites the product's real reference photo onto a generated background."""
         reference_photo_path = get_product_shot_path(product.asset_dir)
-        # No fallback generates the product itself - packaging is exact (logo/label/proportions) and generation is stochastic, so only the scene around a real photo ever gets generated.
+        # AI never generates the product itself - packaging has to look exact, and AI output isn't consistent enough for that, so only the background gets generated.
         if not reference_photo_path:
             raise ValueError(
                 f"No reference photo found for product '{product.id}' in {product.asset_dir} "
