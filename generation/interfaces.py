@@ -5,8 +5,9 @@ from pathlib import Path
 
 from models import Brief, Product
 
-# Python has no native `interface` keyword, so these use ABC/@abstractmethod as a stand-in - every method is abstract with no shared state.
-# The payoff isn't swappable providers (only one implementation exists) - it's letting orchestration/compositing/cropping be tested against a fake with no live API calls, an abstraction cost paid now for a benefit not yet exercised without a test suite.
+# Use abstract classes to keep the calling contract consistent, no matter which LLM backs each category (image gen vs. copy gen)
+# Keeps provider swaps possible down the line, and #
+# Allows testing against a stubbed endpoint.
 
 
 class ImageGenService(ABC):
