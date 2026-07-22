@@ -25,7 +25,7 @@ IMAGE_GEN_MODEL = "gemini-2.5-flash-image"
 LOCALIZER_TEMP = 0.1
 LOCALIZER_MODEL = "gemini-3.1-flash-lite"
 
-
+# TODO: this class inherits both ImageGenService and CopyGenService at once, split into separate classes per interface.
 class GoogleGenAIService(ImageGenService, CopyGenService):
     def __init__(self):
         load_dotenv(dotenv_path=".env")

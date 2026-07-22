@@ -14,6 +14,8 @@ from layout.crop import to_staged_ratios, normalize_ratio, get_rects
 
 
 def generate_campaign(raw_json: str, gen_service: ImageGenService, output_dir: Path):
+
+    # TODO: break this function up instead of doing everything in one place (unit tests and logs)
     with step("Validating campaign brief"):
         brief = process_product_json(raw_json)
     brief_dir = create_versioned_dir(output_dir, brief.id)

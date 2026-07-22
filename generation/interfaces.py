@@ -15,6 +15,7 @@ class ImageGenService(ABC):
 
 class CopyGenService(ABC):
     @abstractmethod
+    # TODO: add return type Dict[str, Dict[str, CampaignMessage]], per the interface
     def localize(self, brief: Brief):
         """Localize the brief's campaign copy into each target market's language(s), preserving tone."""
         pass

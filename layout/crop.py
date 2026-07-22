@@ -25,6 +25,7 @@ def to_staged_ratios(main_img: Image.Image, crop_boxes: dict, canvas_w: float, c
 
 def normalize_ratio(crop_name: str) -> str:
     """Strips Illustrator's '-N' or auto-generated ID suffix from a duplicate crop id, e.g. '1:1-2' -> '1:1'."""
+    # TODO: move Illustrator-specific export logic into own file
     crop_name = re.sub(r'_\d{10,}_?$', '', crop_name)
     return re.sub(r'-\d+$', '', crop_name)
 
