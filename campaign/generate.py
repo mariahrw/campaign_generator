@@ -14,6 +14,7 @@ from layout.crop import to_staged_ratios, normalize_ratio, get_rects
 
 
 def generate_campaign(raw_json: str, gen_service: ImageGenService, output_dir: Path):
+    # TODO: also generate the final composited asset from existing renders, not just the hero image.
     with step("Validating campaign brief"):
         brief = process_product_json(raw_json)
     brief_dir = create_versioned_dir(output_dir, brief.id)
@@ -46,6 +47,7 @@ def generate_campaign(raw_json: str, gen_service: ImageGenService, output_dir: P
         for ratio in product.layouts:
             for layout_id in discover_layouts(ratio):
                 _, layout_name = parse_layout_id(layout_id)
+                # TODO: get user feedback on this - should output live in ratio folders like this, or be grouped by campaign instead?
                 layout_dir = create_dir(product_dir, ratio)
                 header(layout_name, indent=1)
 

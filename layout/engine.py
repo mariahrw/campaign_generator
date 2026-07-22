@@ -17,6 +17,7 @@ TEMPLATES_DIR = "layout/templates"
 
 def describe_camera_framing(layout_id: str) -> str:
     """Derives a camera-angle/framing text description from the mask rect's geometry."""
+    # TODO: do this for rotation too - if a product's 3D render is rigged, pull its real angle and pass that in, instead of the fixed arbitrary angle products use now.
     mask = render(layout_id)
     bbox = get_bbox(mask)
     if bbox is None:
@@ -82,6 +83,7 @@ def render_copy_to_image(
     layout_id: str,
 ) -> list[Path]:
     """Draws each region/language's localized copy onto a fresh copy of the hero image."""
+    # TODO: ask the client - let users pick a layout that matches the copy's aspect ratio, let the AI place copy itself, or offer both?
     rendered_images = []
 
     _, layout_name = parse_layout_id(layout_id)
