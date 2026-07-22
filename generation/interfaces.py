@@ -6,7 +6,7 @@ from pathlib import Path
 from models import Brief, Product
 
 # Use abstract classes to keep the calling contract consistent, no matter which LLM backs each category (image gen vs. copy gen)
-# Keeps provider swaps possible down the line, and #
+# Keeps provider swaps possible down the line, and
 # Allows testing against a stubbed endpoint.
 
 
