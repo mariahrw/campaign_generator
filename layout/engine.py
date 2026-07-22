@@ -17,6 +17,8 @@ TEMPLATES_DIR = "layout/templates"
 
 def describe_camera_framing(layout_id: str) -> str:
     """Derives a camera-angle/framing text description from the mask rect's geometry."""
+    # Feeding Gemini the mask as an image and asking it to infer composition gave inconsistent results, so its position/size get translated into literal camera-angle language instead.
+    # The general principle: wherever real product imagery isn't available to composite from, extract concrete geometric information (position, framing, rotation) and hand the model literal instructions rather than pasting in partial visual references.
     mask = render(layout_id)
     bbox = get_bbox(mask)
     if bbox is None:
